@@ -1,0 +1,96 @@
+Description: This project provides a comprehensive financial dashboard using Power BI, leveraging data from two datasets to deliver insights into sales, profits, and other key financial metrics.
+Datasets:
+Financial Sample Dataset:
+
+Source: Financial sample data
+Columns:
+Segment: Customer segment (e.g., Consumer, Corporate, Home Office)
+Country: Country of sales
+Product: Product category
+Discount Band: Range of discounts applied to sales
+Units Sold: Number of units sold
+Manufacturer: Product manufacturer
+Sale Price: Price at which products are sold
+Gross Sales: Total sales before discounts
+Discount: Total discount amount
+Sale: Sales amount after discount
+COGS (Cost of Goods Sold): Cost incurred in producing goods
+Profit: Profit earned from sales
+Date: Date of the transaction
+Month Number: Numeric representation of the month
+Month Name: Name of the month
+Year: Year of the transaction
+[Second Dataset Name]:
+
+Source: [Source of the second dataset]
+Columns:
+Column 1: Description of column 1
+Column 2: Description of column 2
+Column 3: Description of column 3
+[Add additional columns as necessary]
+Description: This dataset includes [brief description of the dataset], providing additional insights into [relevance to the project].
+Dashboard Components:
+Sales by Segment and Country:
+
+Visualization Type: Bar charts or maps
+Description: Visualizes total sales segmented by customer segment and country.
+QTD (Quarter-to-Date) Profit:
+
+Visualization Type: Line or bar chart
+Description: Shows the cumulative profit within the current quarter.
+MTD (Month-to-Date) Sold:
+
+Visualization Type: Line or bar chart
+Description: Illustrates the number of units sold within the current month.
+YTD (Year-to-Date) Sales:
+
+Visualization Type: Line or bar chart
+Description: Presents the total sales accumulated from the beginning of the year to date.
+Total Discounts by Discount Band:
+
+Visualization Type: Pie chart or bar chart
+Description: Shows the distribution of total discounts across different discount bands.
+Time-Based Performance (2013 to 2014):
+
+Visualization Type: Line chart
+Description: Compares sales and profit over time from 2013 to 2014.
+Summary Table:
+
+Visualization Type: Table
+Description: Displays key metrics including total units sold, total sales, total profit, and profit margin.
+Sales and Profit Overview:
+
+Visualization Type: Various (cards, charts)
+Description: Provides a high-level summary of sales and profit performance, including key KPIs and trends.
+Data Cleaning and Modeling:
+Data Cleaning:
+
+Tasks:
+Handling missing values
+Removing duplicates
+Correcting data types
+Ensuring consistency in categorical data (e.g., product categories, countries)
+Data Modeling:
+
+Tasks:
+Establishing relationships between tables (e.g., Sales, Products, Customers)
+Creating calculated columns and measures for advanced analysis (e.g., profit margin, cumulative totals)
+KPIs and Measures:
+Key Performance Indicators (KPIs):
+
+Total Sales
+Total Profit
+Profit Margin
+Units Sold
+Discounts Given
+Measures:
+
+Total Sales: SUM(Gross Sales)
+Total Discounts: SUM(Discount)
+Net Sales: SUM(Sale)
+Total COGS: SUM(COGS)
+Total Profit: SUM(Profit)
+Profit Margin: DIVIDE([Total Profit], [Net Sales])
+MTD Sales: CALCULATE([Net Sales], DATESMTD(Date[Date]))
+QTD Profit: CALCULATE([Total Profit], DATESQTD(Date[Date]))
+YTD Sales: CALCULATE([Net Sales], DATESYTD(Date[Date]))
